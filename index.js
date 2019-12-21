@@ -6,7 +6,7 @@
  const mongoose = require('mongoose')
  const Signature = require('./models/signature.js')
  const app = express()
- const url = 'mongodb+srv://bousine:assholl@cluster0-elpvc.mongodb.net/test?retryWrites=true&w=majority'
+ const url = process.env.MONGODB_URL
  app.use(bodyParser.json())
 
  app.get('/', (req,res) => {
